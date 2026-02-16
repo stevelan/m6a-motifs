@@ -27,7 +27,7 @@
     a{color:var(--accent); text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{
-      max-width: 1100px;
+      max-width: 850px;
       margin: 0 auto;
       padding: 32px 16px 48px;
     }
@@ -48,7 +48,7 @@
     .subtitle{
       margin:6px 0 0;
       color:var(--muted);
-      max-width: 70ch;
+      max-width: 80ch;
       font-size: 14px;
     }
     .actions{
@@ -70,8 +70,12 @@
       box-shadow: 0 6px 18px rgba(0,0,0,.25);
       font-size: 14px;
     }
+    .btn.primary {
+      background: #2B4679;
+    }
+
     .btn:hover{
-      background: rgba(255,255,255,.06);
+      background: rgba(0,0,255,.2);
       text-decoration:none;
     }
     .grid{
@@ -79,8 +83,8 @@
       grid-template-columns: 1fr;
       gap: 16px;
     }
-    @media (min-width: 980px){
-      .grid{grid-template-columns: 2fr 1fr;}
+    @media (min-width: 780px){
+      .grid{grid-template-columns: 3fr 2fr;}
     }
     .card{
       background: rgba(255,255,255,.03);
@@ -93,6 +97,7 @@
       padding: 12px;
     }
     .poster img{
+      max-width: 510px;
       width: 100%;
       height: auto;
       display:block;
@@ -147,6 +152,7 @@
       color: #d5dbff;
     }
   </style>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
@@ -155,34 +161,38 @@
       <div>
         <h1 class="title">m⁶A motif discovery in <em>Plasmodium falciparum</em></h1>
         <p class="subtitle">
-          Discovery of RNA motifs beyond DRACFH that are necessary for m6a modifications of mRNA.
+          Discovery of RNA motifs beyond DRACH that are necessary for m<sup>6</sup>A modifications of mRNA.
         </p>
       </div>
 
       <div class="actions">
-        <a class="btn" href="assets/m6a-in-pfal-motif-poster.pdf" target="_blank" rel="noopener">Download PDF</a>
+        <a class="btn primary" href="assets/m6a-in-pfal-motif-poster.pdf" target="_blank" rel="noopener">Download PDF</a>
+
       </div>
     </header>
 
     <main class="grid">
       <section class="card poster" aria-label="Poster">
         <!-- Replace poster.png with your filename -->
-        <img src="assets/poster.png" alt="Poster: m6A motif discovery project" />
+        <img src="assets/conference poster.jpg" alt="Poster: m6A motif discovery project" />
       </section>
 
       <aside class="card panel" aria-label="Project details">
-        <h2>At a glance</h2>
         <p>
           This page hosts the poster and a minimal summary so it can be followed as the project progresses. The code is not yet public.
         </p>
-
+        <p>
+          <!-- Code from https://buttons.github.io/ -->
+          <a class="github-button" href="https://github.com/stevelan/m6a-motifs/subscription" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-eye"
+          data-show-count="true" aria-label="Watch stlan/m6a-motifs on GitHub">
+              Watch</a>
+        </p>  
         <ul>
           <li><strong>Data:</strong> long-read dRNA-seq (Nanopore)</li>
           <li><strong>Features:</strong> RNA structure + gene context</li>
           <li><strong>Model:</strong> deep learning classifier for m⁶A-predictive regions</li>
           <li><strong>Motifs:</strong> enrichment on high-saliency / high-score regions</li>
         </ul>
-
         <div class="meta">
           <div class="meta-item">
             <div class="k">Contact</div>
@@ -192,6 +202,7 @@
             <div class="k">Lab/Org</div>
             <div class="v"><a href="https://biomedicalsciences.unimelb.edu.au/sbs-research-groups/biochemistry-and-pharmacology-research/drug-targets-and-gene-regulation-in-plasmodium-falciparum">Ralph Laboratory</a> / University of Melbourne</div>
           </div>
+
         </div>
       </aside>
     </main>
